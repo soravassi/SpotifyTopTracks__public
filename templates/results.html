@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "default.html" %}
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>Success</title>
+</head>
+<h2>Most Listened tracks in the last month</h2>
+
+{% for track in track_ids%}
+<div>
+  <iframe class="column3" src="https://open.spotify.com/embed/track/{{ track }}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+{% endfor %}
+
+<h2>Most Listened tracks in the last 6 months</h2>
+
+{% for track in track_ids_medium%}
+<div>
+  <iframe class="column3" src="https://open.spotify.com/embed/track/{{ track }}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+{% endfor %}
+
+<h2>Most Listened tracks in the last several years</h2>
+
+{% for track in track_ids_long%}
+<div>
+  <iframe class="column3" src="https://open.spotify.com/embed/track/{{ track }}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+{% endfor %}
+
+
+
+{% endblock %}
+
+</html>
